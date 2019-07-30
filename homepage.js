@@ -56,7 +56,7 @@ function getActorsInMovie(movieId, sectionName){
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=a6179a8970a83ddb7877c97b48c5ec4c`,
+        "url": `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=240e4a336a98f4efe1e90ba698f529cd`,
         "method": "GET",
         "headers": {},
         "data": "{}"
@@ -120,7 +120,7 @@ function displayActorDetails(data, sectionName){
 
     let actorData = document.createElement('div');
     actorData.setAttribute('style', 'padding:50px;')
-    actorData.innerHTML = `<p><strong>Name: </strong>${data.name}</p><p><strong>Biography: </strong>${data.biography}</p><p><strong>Birthday:</strong> ${data.birthday}</p> <p><strong>POB:</strong> ${data.place_of_birth}</p>`
+    actorData.innerHTML = `<p><strong>Name: </strong>${data.name}</p><p><strong>Biography: </strong>${data.biography}</p><p><strong>Birthday:</strong> ${data.birthday}</p> <p><strong>POB:</strong> ${data.place_of_birth}</p><p><strong>Credits:</strong> ${data.combined_credits}</p>`
 
 
     container.append(actorDetailsHeader, actorData)
